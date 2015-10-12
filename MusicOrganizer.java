@@ -77,7 +77,7 @@ public class MusicOrganizer
     }
     
     //plays all songs randomly in the aray list
-    public void randomPlayedSong(int song)
+    public void randomListOfSong(int song)
     {
         Collections.shuffle(tracks);
         
