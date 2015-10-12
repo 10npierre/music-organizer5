@@ -81,7 +81,8 @@ public class MusicOrganizer
     {
         Collections.shuffle(tracks);
         
-        for (Track track : tracks){
+        for (Track trackList : tracks){
+            player.startPlaying(trackList.getFilename());
         }
     }
     /**
