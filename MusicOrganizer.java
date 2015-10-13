@@ -65,24 +65,25 @@ public class MusicOrganizer
     }
     
     //Plays a random song in the array list
-    public void randomSong(int songNumber)
+    public void randomSong()
     {
         int music = getNumberOfTracks();
         int songPlaying = random.nextInt(music);
-        if (indexValid(songNumber)) {
             
             Track songTrack = tracks.get(songPlaying);
             player.startPlaying(songTrack.getFilename());
-        }
+            
+            System.out.println("Song playing: " +songTrack.getTitle());
+            System.out.println("Artist of song: " +songTrack.getArtist());
     }
     
     //plays all songs randomly in the aray list
-    public void randomListOfSong(int song)
+    public void randomListOfSong()
     {
         Collections.shuffle(tracks);
         
         for (Track trackList : tracks){
-            player.startPlaying(trackList.getFilename());
+             player.playSample(trackList.getFilename());
         }
     }
     /**
